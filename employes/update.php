@@ -1,4 +1,4 @@
-<a href="../welcome.php">Show Data</a>
+<a href="../welcome.php">Voir les employés</a>
 <br><br>
 
 <?php
@@ -8,15 +8,15 @@ $a=mysqli_query($mysql_db,"SELECT * FROM employes WHERE id='$_GET[id]'");
 $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
 ?>
 <form method="post">
-	prenom : <input type="text" name="prenom" placeholder="Insert Name" value="<?= $b['prenom']; ?>"><br><br>
-	Nom : <input type="text" name="nom" placeholder="Insert Name" value="<?= $b['nom']; ?>"><br><br>
-	Telephone : <input type="text" name="telephone" placeholder="Insert Name" value="<?= $b['telephone']; ?>"><br><br>
-	Adresse : <input type="text" name="adresse" placeholder="Insert Name" value="<?= $b['adresse']; ?>"><br><br>
-	Email : <input type="text" name="email" placeholder="Insert Name" value="<?= $b['email']; ?>"><br><br>
-	Date : <input type="date" name="date_naissance" placeholder="Insert Name" value="<?= $b['date_naissance']; ?>"><br><br>
+	Prénom : <input type="text" name="prenom" placeholder="Votre prénom" value="<?= $b['prenom']; ?>"><br><br>
+	Nom : <input type="text" name="nom" placeholder="Votre nom" value="<?= $b['nom']; ?>"><br><br>
+	Téléphone : <input type="text" name="telephone" placeholder="Votre téléphone" value="<?= $b['telephone']; ?>"><br><br>
+	Adresse : <input type="text" name="adresse" placeholder="Votre adresse" value="<?= $b['adresse']; ?>"><br><br>
+	Email : <input type="text" name="email" placeholder="Votre email" value="<?= $b['email']; ?>"><br><br>
+	Date de naissance : <input type="date" name="date_naissance" placeholder="Date de naissance" value="<?= $b['date_naissance']; ?>"><br><br>
 	
-	<input type="submit" name="update" value="Update">
-	<input type="reset" name="cancel" value="Cancel">
+	<input type="submit" name="update" value="Sauvegarder">
+	<input type="reset" name="cancel" value="Annuler">
 </form>
 <?php
 if(isset($_POST['update']))
@@ -37,7 +37,7 @@ if(isset($_POST['update']))
   }  
   else 
   { 
-    echo "<script>alert('Update Success!')</script>";
+    echo "<script>alert('Sauvegarde réussie!')</script>";
   	echo "<meta http-equiv=refresh content=\"0; url=employes.php\">";
   }
 }

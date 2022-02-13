@@ -9,10 +9,10 @@
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome</title>
+	<title>Congés</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
 	<style>
         .wrapper{ 
@@ -28,14 +28,14 @@
 
    <a class="btn btn-default" href="../welcome.php">Retour</a> 
    <div class="d-block ml-3">
-      <a class="btn btn-success" href="add.php">add</a>
+      <a class="btn btn-success" href="add.php">Ajouter</a>
    </div>
    <br><br>
    <table class="table table-thead text-center">
    <tbody>
       <tr>
-         <th>Employe</th>
-         <th>Duree</th>
+         <th>Employé</th>
+         <th>Durée</th>
          <th>Action</th>
       </tr>
       <?php
@@ -51,8 +51,8 @@
          <td><?= $b['employes']; ?></td>
          <td><?= $b['duree']; ?></td>
          <td>
-               <a class="btn btn-primary" href="update.php?id=<?= $b['id']; ?>"><b><i>Edit</i></b></a> | 
-               <a class="btn btn-danger" href="conges.php?id=<?= $b['id']; ?>" onclick="return confirm('Are you sure?')"><b><i>Delete</i></b></a>
+               <a class="btn btn-primary" href="update.php?id=<?= $b['id']; ?>"><b><i>Modifier</i></b></a> | 
+               <a class="btn btn-danger" href="conges.php?id=<?= $b['id']; ?>" onclick="return confirm('Vous êtes sûr?')"><b><i>Supprimer</i></b></a>
          </td>
       </tr>  
       <?php } ?>                          
@@ -63,9 +63,9 @@
 
 		<section class="container wrapper">
 			<div class="page-header">
-				<h2 class="display-5">Welcome home <?php echo $_SESSION['username']; ?></h2>
+				<h2 class="display-5">Bienvenue <?php echo $_SESSION['username']; ?></h2>
 			</div>
-			<a href="logout.php" class="btn btn-block btn-outline-danger">Sign Out</a>
+			<a href="logout.php" class="btn btn-block btn-outline-danger">Se déconnecter</a>
 		</section>
 	</main>
 </body>
@@ -84,7 +84,7 @@ if(isset($_GET['id']))
     } 
     else 
     {
-      echo "<script>alert('Delete Success!')</script>";
+      echo "<script>alert('Suppression réussie!')</script>";
       echo "<meta http-equiv=refresh content=\"0; url=conges.php\">";
     }
 }

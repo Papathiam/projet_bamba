@@ -2,11 +2,11 @@
 <br><br>
 <form method="post">
 
-	Employe : <input type="text" name="employes" placeholder="Insert Name"><br><br>
-	Date : <input type="date" name="date" placeholder="Insert date"><br><br>
+	Employe : <input type="text" name="employes" placeholder="Votre nom"><br><br>
+	Date : <input type="date" name="date" placeholder="La date du pointage"><br><br>
 	
-	<input type="submit" name="add" value="Add">
-	<input type="reset" name="reset" value="Cancel">
+	<input type="submit" name="add" value="Ajouter">
+	<input type="reset" name="reset" value="Annuler">
 </form>
 
 <?php
@@ -24,7 +24,7 @@ if(isset($_POST['add']))
   }  
   else 
   {
-    echo "<script>alert('Add Success!')</script>";
+    echo "<script>alert('Ajout réussi!')</script>";
   	echo "<meta http-equiv=refresh content=\"0; url=pointages.php\">";
   }
 }

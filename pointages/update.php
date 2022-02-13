@@ -8,11 +8,11 @@ $a=mysqli_query($mysql_db,"SELECT * FROM pointages WHERE id='$_GET[id]'");
 $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
 ?>
 <form method="post">
-employes : <input type="text" name="employes" placeholder="Insert Name" value="<?= $b['employes']; ?>"><br><br>
-	Date : <input type="date" name="date" placeholder="Insert Name" value="<?= $b['date']; ?>"><br><br>
+  Employe : <input type="text" name="employes" placeholder="Employé" value="<?= $b['employes']; ?>"><br><br>
+	Date : <input type="date" name="date" placeholder="La date du pointage" value="<?= $b['date']; ?>"><br><br>
 	
-	<input type="submit" name="update" value="Update">
-	<input type="reset" name="cancel" value="Cancel">
+	<input type="submit" name="update" value="Sauvegarder">
+	<input type="reset" name="cancel" value="Annuler">
 </form>
 <?php
 if(isset($_POST['update']))
@@ -29,7 +29,7 @@ if(isset($_POST['update']))
   }  
   else 
   { 
-    echo "<script>alert('Update Success!')</script>";
+    echo "<script>alert('Sauvegarde réussie!')</script>";
   	echo "<meta http-equiv=refresh content=\"0; url=pointages.php\">";
   }
 }

@@ -1,4 +1,4 @@
-<a href="conges.php">Show Data</a>
+<a href="conges.php">Voir les congés</a>
 <br><br>
 
 <?php
@@ -8,11 +8,11 @@ $a=mysqli_query($mysql_db,"SELECT * FROM conges WHERE id='$_GET[id]'");
 $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
 ?>
 <form method="post">
-employes : <input type="text" name="employes" placeholder="Insert Name" value="<?= $b['employes']; ?>"><br><br>
-Duree : <input type="number" name="duree" placeholder="Insert Name" value="<?= $b['duree']; ?>"><br><br>
+Employe : <input type="text" name="employes" placeholder="Employé" value="<?= $b['employes']; ?>"><br><br>
+Duree : <input type="number" name="duree" placeholder="La durée du congé" value="<?= $b['duree']; ?>"><br><br>
 	
-	<input type="submit" name="update" value="Update">
-	<input type="reset" name="cancel" value="Cancel">
+	<input type="submit" name="update" value="Sauvegarder">
+	<input type="reset" name="cancel" value="Annuler">
 </form>
 <?php
 if(isset($_POST['update']))
@@ -29,7 +29,7 @@ if(isset($_POST['update']))
   }  
   else 
   { 
-    echo "<script>alert('Update Success!')</script>";
+    echo "<script>alert('Sauvegarde réussie!')</script>";
   	echo "<meta http-equiv=refresh content=\"0; url=conges.php\">";
   }
 }

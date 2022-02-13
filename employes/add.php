@@ -1,16 +1,16 @@
-<a href="employes.php">Show Data</a>
+<a href="employes.php">Voir les congés</a>
 <br><br>
 <form method="post">
 
-	Prenom : <input type="text" name="prenom" placeholder="Insert Name"><br><br>
-	Nom : <input type="text" name="nom" placeholder="Insert Name"><br><br>
-	Telephone : <input type="text" name="telephone" placeholder="Insert Name"><br><br>
-	Adresse : <input type="text" name="adresse" placeholder="Insert Name"><br><br>
-	Email : <input type="text" name="email" placeholder="Insert Name"><br><br>
-	Date : <input type="date" name="date_naissance" placeholder="Insert Name"><br><br>
+	Prénom : <input type="text" name="prenom" placeholder="Votre prénom"><br><br>
+	Nom : <input type="text" name="nom" placeholder="Votre nom"><br><br>
+	Téléphone : <input type="text" name="telephone" placeholder="votre téléphone"><br><br>
+	Adresse : <input type="text" name="adresse" placeholder="Votre adresse"><br><br>
+	Email : <input type="text" name="email" placeholder="Votre email"><br><br>
+	Date de naissance : <input type="date" name="date_naissance" placeholder="Votre date de naissance"><br><br>
 	
-	<input type="submit" name="add" value="Add">
-	<input type="reset" name="reset" value="Cancel">
+	<input type="submit" name="add" value="Ajouter">
+	<input type="reset" name="reset" value="Annuler">
 </form>
 <?php
 if(isset($_POST['add']))
@@ -31,7 +31,7 @@ if(isset($_POST['add']))
   }  
   else 
   {
-    echo "<script>alert('Add Success!')</script>";
+    echo "<script>alert('Ajout réussi!')</script>";
   	echo "<meta http-equiv=refresh content=\"0; url=employes.php\">";
   }
 }
