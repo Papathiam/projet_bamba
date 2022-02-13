@@ -2,34 +2,6 @@
 <a href="employes/employes.php">Liste employes</a> <br>
 <a href="pointages/pointages.php">Liste pointage</a> <br>
 <a href="conges/conges.php">Liste des Congés</a> <br>
-<br><br>
-<table border="">
- <tbody>
-    <tr>
-       <th>ID</th>
-       <th>Name</th>
-       <th>Action</th>
-    </tr>
-    <?php
-	  // Include config file
-	  require_once "config/config.php";
-
-    //include 'config.php';
-    $a=mysqli_query($mysql_db,"SELECT * FROM users");
-    foreach ($a as $b)
-    {
-    ?>
-    <tr>
-       <td><?= $b['id']; ?></td>
-       <td><?= $b['username']; ?></td>
-       <td>
-            <a href="update.php?id=<?= $b['id']; ?>"><b><i>Edit</i></b></a> | 
-            <a href="welcome.php?id=<?= $b['id']; ?>" onclick="return confirm('Are you sure?')"><b><i>Delete</i></b></a>
-        </td>
-    </tr>  
-    <?php } ?>                          
- </tbody>
-</table>
 
 
 <?php
