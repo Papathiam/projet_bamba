@@ -90,7 +90,7 @@
   }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Sign in</title>
@@ -107,25 +107,25 @@
 <body>
   <main>
     <section class="container wrapper">
-      <h2 class="display-4 pt-3">Login</h2>
-          <p class="text-center">Please fill this form to create an account.</p>
+      <h2 class="display-4 pt-3">Se connecter</h2>
+          <p class="text-center">Veuillez remplir ce formulaire pour créer un compte.</p>
           <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
             <div class="form-group <?php (!empty($username_err))?'has_error':'';?>">
-              <label for="username">Username</label>
+              <label for="username">Nom d'utilisateur</label>
               <input type="text" name="username" id="username" class="form-control" value="<?php echo $username ?>">
               <span class="help-block"><?php echo $username_err;?></span>
             </div>
 
             <div class="form-group <?php (!empty($password_err))?'has_error':'';?>">
-              <label for="password">Password</label>
+              <label for="password">Mot de passe</label>
               <input type="password" name="password" id="password" class="form-control" value="<?php echo $password ?>">
               <span class="help-block"><?php echo $password_err;?></span>
             </div>
 
             <div class="form-group">
-              <input type="submit" class="btn btn-block btn-outline-primary" value="login">
+              <input type="submit" class="btn btn-block btn-outline-primary" value="Se connecter">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign in</a>.</p>
+            <p>Don't have an account? <a href="register.php">S'inscrire</a>.</p>
           </form>
     </section>
   </main>

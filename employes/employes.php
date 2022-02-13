@@ -12,7 +12,7 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Employés</title>
+	<title>EMPLOYES</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
 	<style>
         .wrapper{ 
