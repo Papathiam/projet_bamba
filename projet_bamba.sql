@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : Dim 13 fév. 2022 à 04:01
+-- Généré le : Dim 13 fév. 2022 à 11:27
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 7.4.15
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `projet_bamba`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `conges`
+--
+
+CREATE TABLE `conges` (
+  `id` int(11) NOT NULL,
+  `employes` int(11) NOT NULL,
+  `duree` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `conges`
+--
+
+INSERT INTO `conges` (`id`, `employes`, `duree`) VALUES
+(2, 56, 34);
 
 -- --------------------------------------------------------
 
@@ -91,6 +110,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
 --
 
 --
+-- Index pour la table `conges`
+--
+ALTER TABLE `conges`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `employes`
 --
 ALTER TABLE `employes`
@@ -112,6 +137,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `conges`
+--
+ALTER TABLE `conges`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `employes`
