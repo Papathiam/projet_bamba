@@ -8,8 +8,8 @@ $a=mysqli_query($mysql_db,"SELECT * FROM conges WHERE id='$_GET[id]'");
 $b=mysqli_fetch_array($a,MYSQLI_ASSOC)
 ?>
 <form method="post">
-Employe : <input type="text" name="employes" placeholder="Employé" value="<?= $b['employes']; ?>"><br><br>
-Duree : <input type="number" name="duree" placeholder="La durée du congé" value="<?= $b['duree']; ?>"><br><br>
+  Employe : <input type="text" name="employes" placeholder="Employé" value="<?= $b['employes']; ?>"><br><br>
+  Duree : <input type="number" name="duree" placeholder="La durée du congé" value="<?= $b['duree']; ?>"><br><br>
 	
 	<input type="submit" name="update" value="Sauvegarder">
 	<input type="reset" name="cancel" value="Annuler">

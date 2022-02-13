@@ -20,14 +20,14 @@
 
     // Check if username is empty
     if(empty(trim($_POST['username']))){
-      $username_err = 'Please enter username.';
+      $username_err = "Veuillez saisir votre nom d'utilisateur.";
     } else{
       $username = trim($_POST['username']);
     }
 
     // Check if password is empty
     if(empty(trim($_POST['password']))){
-      $password_err = 'Please enter your password.';
+      $password_err = 'Veuillez saisir votre mot de passe.';
     } else{
       $password = trim($_POST['password']);
     }
@@ -71,14 +71,14 @@
                 header('location: welcome.php');
               } else {
                 // Display an error for passord mismatch
-                $password_err = 'Invalid password';
+                $password_err = 'Mot de passe invalide';
               }
             }
           } else {
-            $username_err = "Username does not exists.";
+            $username_err = "Le nom d'utilisateur n'existe pas.";
           }
         } else {
-          echo "Oops! Something went wrong please try again";
+          echo "Oups! quelque chose s'est mal passé. Veuillez réessayer plus tard.";
         }
         // Close statement
         $stmt->close();
@@ -93,7 +93,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Sign in</title>
+  <title>Connexion</title>
   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
   <style>
     .wrapper{ 
@@ -125,7 +125,7 @@
             <div class="form-group">
               <input type="submit" class="btn btn-block btn-outline-primary" value="Se connecter">
             </div>
-            <p>Don't have an account? <a href="register.php">S'inscrire</a>.</p>
+            <p>Vous n'avez pas de compte? <a href="register.php">S'inscrire</a>.</p>
           </form>
     </section>
   </main>

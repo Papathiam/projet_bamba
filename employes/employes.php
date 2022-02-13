@@ -73,7 +73,7 @@
 			<div class="page-header">
 				<h2 class="display-5">Bienvenue <?php echo $_SESSION['username']; ?></h2>
 			</div>
-			<a href="logout.php" class="btn btn-block btn-outline-danger">Sign Out</a>
+			<a href="logout.php" class="btn btn-block btn-outline-danger">Se déconnecter</a>
 		</section>
 	</main>
 </body>

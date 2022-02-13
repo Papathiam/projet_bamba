@@ -1,6 +1,6 @@
 
-<a href="employes/employes.php">Liste employes</a> <br>
-<a href="pointages/pointages.php">Liste pointage</a> <br>
+<a href="employes/employes.php">Liste des employés</a> <br>
+<a href="pointages/pointages.php">Liste des pointages</a> <br>
 <a href="conges/conges.php">Liste des Congés</a> <br>
 
 
@@ -14,10 +14,10 @@
 	}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome</title>
+	<title>Bienvenue</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-qdQEsAI45WFCO5QwXBelBe1rR9Nwiss4rGEqiszC+9olH1ScrLrMQr1KmDR964uZ" crossorigin="anonymous">
 	<style>
         .wrapper{ 
@@ -32,11 +32,11 @@
 	<main>
 		<section class="container wrapper">
 			<div class="page-header">
-				<h2 class="display-5">Welcome home <?php echo $_SESSION['username']; ?></h2>
+				<h2 class="display-5">Bienvenue <?php echo $_SESSION['username']; ?></h2>
 			</div>
 
-			<a href="password_reset.php" class="btn btn-block btn-outline-warning">Reset Password</a>
-			<a href="logout.php" class="btn btn-block btn-outline-danger">Sign Out</a>
+			<a href="password_reset.php" class="btn btn-block btn-outline-warning">Réinitialiser le mot de passe</a>
+			<a href="logout.php" class="btn btn-block btn-outline-danger">Se déconnecter</a>
 		</section>
 	</main>
 </body>
@@ -55,7 +55,7 @@ if(isset($_GET['id']))
     } 
     else 
     {
-      echo "<script>alert('Delete Success!')</script>";
+      echo "<script>alert('Suppression réussie!')</script>";
       echo "<meta http-equiv=refresh content=\"0; url=welcome.php\">";
     }
 }
