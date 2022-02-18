@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : dim. 13 fév. 2022 à 14:35
--- Version du serveur : 10.4.22-MariaDB
--- Version de PHP : 8.1.1
+-- Hôte : localhost
+-- Généré le : ven. 18 fév. 2022 à 22:52
+-- Version du serveur :  10.4.17-MariaDB
+-- Version de PHP : 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,9 +38,7 @@ CREATE TABLE `conges` (
 --
 
 INSERT INTO `conges` (`id`, `employes`, `duree`) VALUES
-(2, 56, 34),
-(0, 77, 24),
-(0, 77, 24);
+(2, 56, 34);
 
 -- --------------------------------------------------------
 
@@ -63,9 +61,7 @@ CREATE TABLE `employes` (
 --
 
 INSERT INTO `employes` (`id`, `prenom`, `nom`, `date_naissance`, `telephone`, `adresse`, `email`) VALUES
-(1, 'Papa 12', 'thiam 12', '2022-02-13', 432432, 'Oukama', 'papa@gmail.comn'),
-(3, 'Bamba', 'SAMB', '1999-09-19', 778103928, 'Colobane', 'sambkhadim325@gmail.com'),
-(4, 'inconnu', 'inconnu', '2022-01-31', 23424224, 'inconnu', 'inconnu@gmail.com');
+(1, 'Papa 12', 'thiam 12', '2022-02-13', 432432, 'Oukama', 'papa@gmail.comn');
 
 -- --------------------------------------------------------
 
@@ -84,8 +80,7 @@ CREATE TABLE `pointages` (
 --
 
 INSERT INTO `pointages` (`id`, `employes`, `date`) VALUES
-(2, 'test', '2022-02-13'),
-(3, 'Bamba', '2022-02-10');
+(2, 'test', '2022-02-13');
 
 -- --------------------------------------------------------
 
@@ -108,12 +103,17 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
 (1, 'test', '$2y$10$nf5S8K9hgMCtkWtuwYQoGukUBdFfwrdsIf6JrKXDxV4qxwNmqqrhi', '2022-02-12 23:05:34'),
 (2, 'papa', '$2y$10$gVxAR6PxgKqF07ovpXvJoeG1VDCfzTQ4f2LASFHA0KUw40shHWfdu', '2022-02-12 23:06:35'),
 (12, 'ref', 'fdsfsd', '2022-02-13 02:02:25'),
-(76, '76', '76', '2022-02-13 02:03:13'),
-(77, 'Bamba', '$2y$10$EdUEGae/9eK7rUPgkQGwMOWAHqmHRtU3JGaNoBk8aaqErApFJgmnC', '2022-02-13 11:14:04');
+(76, '76', '76', '2022-02-13 02:03:13');
 
 --
 -- Index pour les tables déchargées
 --
+
+--
+-- Index pour la table `conges`
+--
+ALTER TABLE `conges`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `employes`
@@ -139,22 +139,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pour la table `conges`
+--
+ALTER TABLE `conges`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT pour la table `employes`
 --
 ALTER TABLE `employes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `pointages`
 --
 ALTER TABLE `pointages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
